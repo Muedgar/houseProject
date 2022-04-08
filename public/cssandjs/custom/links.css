@@ -1,0 +1,60 @@
+.articleLink a {
+    position: relative;
+    display: inline-block;
+    color: rgb(16, 16, 128);;
+  }
+  .articleLink a::before {
+    position: absolute;
+    top: 100%;
+    content: attr(href);
+    opacity: 0;
+    display: block;
+    transition: 0.25s all;
+    height: 0;
+    overflow: hidden;
+    padding: 0.25em 1em;
+    background: #fff;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    font-size: 0.7em;
+    color: #555;
+  }
+  .articleLink a:hover::before {
+    opacity: 1;
+    display: block;
+    height: auto;
+  }
+  
+  .bodyDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    background: rgb(16, 16, 128);
+    font-size: 1.3em;
+    line-height: 170%;
+    font-family: "Lora", serif;
+  }
+  
+  .articleLink {
+    padding: 1em;
+    max-width: 95%;
+    width: 20em;
+    background: #fff;
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .articleLink p {
+    margin: 0;
+  }
+  
+  .articleLink h1 {
+    margin: 0;
+    text-align: center;
+  }
+  .articleLink h1::after {
+    display: block;
+    content: "";
+    border-top: 2px solid rgb(16, 16, 128);;
+    width: 5em;
+    margin: 1em auto;
+  }

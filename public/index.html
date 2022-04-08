@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/villacare.ico" type="image/x-icon">
+    <title>Villacare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./cssandjs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./cssandjs/custom/style.css">
+    <link rel="stylesheet" href="./cssandjs/custom/codepen.css">
+    <link rel="stylesheet" href="./cssandjs/custom/links.css">
+    <link rel="stylesheet" href="./cssandjs/custom/footer.css">
+</head>
+<body>
+    <!--Start Nav Bar-->
+    <nav style="position: sticky; top: 0; z-index: 100;" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <img src="./assets/villacare.ico" alt="" srcset="" style="width: 100px; height: 100px"> <h1 id="app-title">Villa Care</h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul id="nav-ul" class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="http://localhost:3000/merchant">Rental Manager</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#houseIcon">How It Work?</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More Action
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li id="moreactionsmenu">
+                  <form id="viewupdate" action="http://localhost:3000/merchant/view" method="get">
+                      <input class="sameaslink btn btn-primary btn-info" type="submit" value="View Homes">
+                  </form>
+                  
+                </li>
+                <a class="nav-link" aria-current="page" href="http://localhost:3000/merchant/view">View Rental Listings</a>
+              </ul>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="http://localhost:3000/merchantView">View Rental Listings</a>
+            </li>
+          </ul>
+          <div class="mb-3 form1-class">
+              <form id="form1" action="" method="post">
+                  <div class="custom-file mb-3">
+                      <input class="form-control custom-file-input" type="file" id="houses">        
+                      <input type="submit" value="Upload Houses Excel File and Click Here to Submit" class="sameaslink btn btn-primary btn-block">
+                  </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--End Nav Bar-->
+    <main id="hero">
+      <div class="px-4 py-5 text-center">
+        <h1 class="display-5 fw-bold">Post your listings free</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">List your rental. Screen tenants.
+            Sign a lease. Get paid.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <div class="spinner scroll-down"> <a class="animate" href="#houseIcon"></a> </div>
+          </div>
+        </div>
+      </div>
+    
+      
+    </main>
+    <section id="houseIcon">
+      <div class="card">
+        <i style="color: #3373ab;" class="fa-solid fa-city"></i>
+        <div class="card-body">
+          <h1 class="card-text">Fill vacancies and
+            manage properties.</h1>
+        </div>
+      </div>
+      <div class="card">
+        <i style="color: #536d58;" class="fa-solid fa-people-group"></i>
+        <div class="card-body">
+          <h1 class="card-text">Over 100
+            visitors each month.</h1>
+        </div>
+      </div>
+      <div class="card">
+        <i style="color: gold;" class="fa-solid fa-award"></i>
+        <div class="card-body">
+          <h1 class="card-text">A brand you
+            can trust.</h1>
+        </div>
+      </div>
+    </section>
+    <section id="features">
+      <div id="features-title">
+        <h1>It's easier than ever to be a landlord</h1>
+        <h2>Download the excel file below, edit content (aka remove all image links,... and insert your data)</h2>
+         <h2> Add your own data but don't change headers, start editing from row 2</h2>
+         <h2> And upload it here, top right corner of the page.</h2>
+        <img src="./assets/here.png" alt="" srcset="">
+      </div>
+      <div id="excel-link">
+        
+      </div>
+      <div class="bodyDiv">
+        <article class="articleLink">
+          <h1>Click on the link below and Download the Excel File</h1>
+          <p>It is important to upload the exact file format like this one, the headers are in this order, [image1,image2,image3,image4,image5,<br>image6,image7,image8,image9,costpermonth,<br>size,location,description,contact1,contact2,<br>contact3,ownercontact,rentalfacts], don't change the naming of these titles only change the content thank you.<a href="https://docs.google.com/spreadsheets/d/1w35BbK6adMC_kT-HknvTx8i9lh69H5Utu3VlSmyr0l4/edit?usp=sharing" target="_blank">Excel File Rental Listings Format</a> will take them.</p>
+        </article>
+      </div>
+    </section>
+    
+    
+    
+
+
+
+      <!-- Site footer -->
+      <footer class="site-footer">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2022 Coded with <span style="margin-right: 5px;"> ❤️ </span> by Lidy.
+              </p>
+            </div>
+          </div>
+        </div>
+  </footer>
+
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./cssandjs/bootstrap/bootstrap.min.js"></script>
+    <script src="./cssandjs/excel/xlsx.full.min.js"></script>
+    <script defer src="./cssandjs/custom/app.js"></script>
+    <script defer src="./cssandjs/custom/updateNav.js"></script>
+    
+</body>
+</html>

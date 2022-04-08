@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/villacare.ico" type="image/x-icon">
+    <title>Villacare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./cssandjs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./cssandjs/custom/style.css">
+    <link rel="stylesheet" href="./cssandjs//custom//codepen.css">
+    <!--
+        specific update css
+    -->
+    <link rel="stylesheet" href="./cssandjs/custom/update.css">
+    <link rel="stylesheet" href="./cssandjs/custom/footer.css">
+</head>
+<body>
+    <!--Start Nav Bar-->
+    <nav style="position: sticky; top: 0; z-index: 100;" class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> <img src="./assets/villacare.ico" alt="" srcset="" style="width: 100px; height: 100px"> <h1 id="app-title">Villa Care</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="nav-ul" class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="http://localhost:3000/merchant">Rental Manager</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">How It Work?</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More Action
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li id="moreactionsmenu">
+                    <form id="viewupdate" action="http://localhost:3000/merchant/view" method="get">
+                        <input class="sameaslink btn btn-primary btn-info" type="submit" value="View Homes">
+                    </form>
+                    
+                  </li>
+                </ul>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="http://localhost:3000/merchantView">View Rental Listings</a>
+              </li>
+            </ul>
+            <div class="mb-3 form1-class">
+                <form id="form1" action="" method="post">
+                    <div class="custom-file mb-3">
+                        <input class="form-control custom-file-input" type="file" id="houses">        
+                        <input type="submit" value="Upload Houses Excel File and Click Here to Submit" class="sameaslink btn btn-primary btn-block">
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+<!--Display many houses-->
+      <ul id="houses-container">    
+      </ul>
+      <!--no data-->
+      
+
+<!--Display only one houses and inside that html element build 
+user interface components to 
+1.Display only one house (the viewing of houses will be the same for both tenant and merchant)
+2.Update A Single House
+3.Delete A Single House
+4.View A Single House Payments and decide which to collect likely the latest
+5.Update A Single House Payment by changing the status to rent collected (there is a need to build an api that will input a house id and return payment object)
+-->
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+        
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2022 Coded with <span style="margin-right: 5px;"> ❤️ </span> by Lidy.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="./cssandjs/bootstrap/bootstrap.min.js"></script>
+      <script src="./cssandjs/excel/xlsx.full.min.js"></script>
+      <script defer src="./cssandjs/custom/app.js"></script>
+    <script defer src="./cssandjs/custom/update.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,138 @@
+#houses-container {
+    list-style: none;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+}
+@media (max-width: 1270px) {
+    #houses-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width: 970px) {
+    #houses-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #houses-container li {
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 670px) {
+    #houses-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    #houses-container li {
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+.house-item {
+    width: 300px;
+    height: 350px;
+    transform-style: preserve-3d;
+    perspective: 200cm;
+    margin-bottom: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 3px #0000009e;
+}
+.house-list-card {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transform-style: preserve-3d;
+    padding: 0;
+    perspective: 200cm;
+    overflow: hidden;
+}
+.house-list-card-info {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear;
+    overflow: hidden;
+}
+.house-list-card-info:hover {
+    box-shadow: 0px 0px 1px 1px #0000009e;
+}
+.house-item-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  transform: translateZ(5px);
+  transition: all .3s linear;
+  overflow: hidden;
+}
+.house-item-img:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                  0 2px 4px rgba(0,0,0,0.07), 
+                  0 4px 8px rgba(0,0,0,0.07), 
+                  0 8px 16px rgba(0,0,0,0.07),
+                  0 16px 32px rgba(0,0,0,0.07), 
+                  0 32px 64px rgba(0,0,0,0.07);
+}
+.house-list-card-link {
+  width: 100%;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.house-list-card-heading {
+    width: 100%;
+    background: aliceblue;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    overflow: hidden;
+}
+.house-list-card-heading h4 {
+    font-size: 2em;
+    font-family: monospace;
+    font-weight: bolder;
+    margin: 5px;
+    color: black;
+}
+.house-list-card-heading h5 {
+    font-size: 1em;
+    font-family: system-ui;
+    font-weight: 300;
+    color: black;
+    margin: 5px;
+}
+.house-list-card-heading h6 {
+    font-size: .9em;
+    font-weight: 200;
+    margin: 5px;
+}
+.specialDataWaitingClassContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+}
+.specialDataWaitingClass {
+    font-size: 7em;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(14, 14, 114);
+    margin: auto;
+}
