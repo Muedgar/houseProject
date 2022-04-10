@@ -55,13 +55,18 @@ Read payments
 //Best approach
 //One final Api = 1 final UI
 Apis
+Emphasis on Merchant
 1.Create (Emphasis is Backend) and (Emphasis is frontend) Read Houses = Build Final UI
-2.Update (Emphasis is Backend) and (Emphasis is frontend) Read Houses = Build Final UI
-3.Delete (Emphasis is Backend) and (Emphasis is frontend) Read Houses = Build Final UI
-4.Create (Emphasis is Backend) and (Emphasis is frontend) Read Due Payment = Build Final UI
-5.Update (Emphasis is Backend) and (Emphasis is frontend) Read Due Payment = Build Final UI
-6.Delete (Emphasis is Backend) and (Emphasis is frontend) Read Due Payment = Build Final UI
-7.Authorization and authentication = Build Final UI
+2.Update (Emphasis is Backend) and (Emphasis is frontend) Read Houses = Build Final UI [today]
+3.Delete (Emphasis is Backend) and (Emphasis is frontend) Read Houses = Build Final UI [today]
+Emphasis on Tenant
+4.Create (Emphasis is Backend) and (Emphasis is frontend) Read Due Payment = Build Final UI [today]
+5.Update (Emphasis is Backend) and (Emphasis is frontend) Read Due Payment = Build Final UI [today]
+6.Delete (Emphasis is Backend) and (Emphasis is frontend) Read Due Payment = Build Final UI [today]
+
+7.Sync payment and housing [Building Final UI and Back end Integration]
+
+8.Authorization and authentication = Build Final UI
 
 14 Different Tasks.
 Background processes
@@ -69,4 +74,21 @@ Background processes
 
 TOTAL APIS TO BUILD = 7.
 TOTAL UI FINAL COMPONENTS = 7.
+
+Task 1: Describe the tenant's user experience
+Task 2: Break the tenant's user experience into small tasks
+Task 3: Start implementing tenant's user experience
+
+Task 1: Tenant's user experience:
+Need 1: Start or continue renting by creating a payment document depending on payment collection (ability to pay rent any house that doesn't have a payment yet or any house whose payment has been made only in the first month of three months from now), and a payment cannot exceed the rent due payment in a particular month, but a there can be payments made to the same house in one month as long as it doesn't exceed the limit.
+Summary Need 1: Create payments depending on payment collection
+Need 2: View all houses that aren't rented in a particular month, even if rent has not been paid for the next two month.
+Summary Need 2: View by filtering houses depending on payment collection
+Need 3: Viewing all pending rents in one place, (the only place to delete from payment collection)with the ability to delete payment if it has not been collected yet.
+Summary Need 3: View all pending rents depending on payment collection
+Need 4: Viewing all rented houses in one place, and that is where a user should keep paying rent
+Summary Need 4: View all rented houses depending on payment collection
+
+Task 2: Small tasks in creating tenant's user experience
+Need 1:
 */

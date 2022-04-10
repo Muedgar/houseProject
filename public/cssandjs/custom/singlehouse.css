@@ -1,0 +1,280 @@
+.view-single-house {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    margin: 0;
+    padding: 0;
+}
+.view-single-house-gallery {
+    width: 100%;
+    height: 90vh;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    padding-bottom: 20px;
+}
+.view-single-house-gallery img {
+    width: 25vw;
+    margin: 10px;
+}
+.rows {
+    margin: 90px;
+
+}
+
+/* .view-single-house-gallery-other-images:nth-child(1) {
+    display: block;
+    width: 100%;
+    margin: 5px;
+}
+.view-single-house-gallery-other-images img {
+    width: 25vw;
+    margin: 5px;
+} */
+
+@media (max-width: 750px) {
+    /* .view-single-house {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+    .view-single-house-gallery {
+        width: 1000px;
+        height: 50vh;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        overflow-x: scroll;
+    }
+
+
+
+    .view-single-house-gallery-image-1 {
+        width: 300px;
+        margin: 5px;
+        overflow-x: scroll;
+    }
+    .view-single-house-gallery-image-1 img {
+        margin: 5px;
+    }
+    .view-single-house-gallery-other-images {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        overflow:auto;
+    }
+    .view-single-house-gallery-other-images img {
+        width: 300px;
+        margin: 5px;
+    } */
+}
+
+
+
+
+
+.view-single-house-info {
+    width: 100%;
+    height: 90vh;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+}
+
+
+
+
+
+#view-single-house-controls {
+        width: 100vw;
+        height: 90vh;
+        position: absolute;
+        top: 100px;
+}
+#vshc-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#view-single-house-controls button {
+    width: 250px;
+    height: 50px;
+    margin:20px;
+    font-size: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    box-shadow: 2px 2px 2px 2px #333, 2px 2px 2px 2px #eee,2px 2px 2px 2px #333, 2px 2px 2px 2px #eee,2px 2px 2px 2px #333, 2px 2px 2px 2px #eee,2px 2px 2px 2px #333, 2px 2px 2px 2px #eee,2px 2px 2px 2px #333, 2px 2px 2px 2px #eee;
+    transition: all 0.3s linear;
+}
+
+#view-single-house-controls button:hover {
+    box-shadow: 2px 2px 2px 2px #333;
+}
+
+#view-single-house-info-details {
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.view-single-house-info-card {
+    width: 30vw;
+    height: 500px;
+    border: 4px solid black;
+    overflow: scroll;
+    padding: 20px;
+}
+.view-single-house-info-card h1 {
+    font-size: 1em;
+}
+
+
+
+/*Update house info form*/
+#vshc-form-container {
+    width: 100vw;
+    height:80vh;
+}
+#vshc-form-container form {
+    width: 100%;
+    height: 65%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top:0;
+}
+#singlehouseformiddiv {
+    width: 100%;
+    height:100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top:0;
+    overflow: scroll;
+}
+#vshc-form-container form div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height:100%;
+}
+.vshc-wrapper8 {
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+}
+.vshc-wrapper7 {
+    z-index: 2;
+    background-color: white;
+    flex-direction: column;
+}
+.vshc-wrapper6 {
+    z-index: 3;
+    background-color: white;
+    flex-direction: column;
+}
+.vshc-wrapper5 {
+    z-index: 4;
+    background-color: white;
+    flex-direction: column;
+}
+.vshc-wrapper4 {
+    z-index: 5;
+    background-color: white;
+    flex-direction: column;
+}
+.vshc-wrapper3 {
+    z-index: 6;
+    background-color: white;
+    flex-direction: column;
+}
+.vshc-wrapper2 {
+    z-index: 7;
+    background-color: white;
+    flex-direction: column;
+}
+.vshc-wrapper1 {
+    z-index: 8;
+    background-color: white;
+    flex-direction: column;
+}
+.drawLabel {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em 2em;
+    box-shadow: inset 0 0 0 2px #0d6efd;
+    color: #0d6efd;
+    font-size: inherit;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+    height: 76px;
+    width: 250px;
+  }
+  .drawLabel::before, .drawLabel::after {
+    box-sizing: inherit;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .draw {
+    transition: color 0.25s;
+  }
+  .draw::before, .draw::after {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+  }
+  .draw::before {
+    top: 0;
+    left: 0;
+  }
+  .draw::after {
+    bottom: 0;
+    right: 0;
+  }
+  .draw:hover {
+    color: #60daaa;
+  }
+  .draw:hover::before, .draw:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+  .draw:hover::before {
+    border-top-color: #60daaa;
+    border-right-color: #60daaa;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+  }
+  .draw:hover::after {
+    border-bottom-color: #60daaa;
+    border-left-color: #60daaa;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  }
+
+input {
+    margin: 10px;
+}
+textarea {
+    margin: 10px;
+}

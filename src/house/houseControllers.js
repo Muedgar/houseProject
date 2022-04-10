@@ -59,6 +59,7 @@ const readHouseController = async (req, res) => {
 
 const updateHouseController = async (req,res)=> {
     try {
+        console.log(req.body);
         const {id,contact1,contact2,contact3,costpermonth,description,image1,image2,image3,image4,image5,image6,image7,image8,image9,location,ownercontact,rentalfacts,size} = req.body;
         await new housesRepository().updateHouses(id,contact1,contact2,contact3,costpermonth,description,image1,image2,image3,image4,image5,image6,image7,image8,image9,location,ownercontact,rentalfacts,size).then(d=>{
                 res.status(200).json({status: "data updated"});
