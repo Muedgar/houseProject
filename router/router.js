@@ -2,7 +2,7 @@
 const router = require("express").Router();
 // require necessary files
 const {createHouseController, readHouseController,updateHouseController,deleteHouseController} = require("../src/house/houseControllers.js");
-const {createPaymentController, readPaymentController, updatePaymentController, deletePaymentController} = require("../src/payment/paymentControllers");
+const {createPaymentController, readPaymentController,merchantReadsPaymentController, updatePaymentController, deletePaymentController} = require("../src/payment/paymentControllers");
 // house related routes
 router.post('/house/create',createHouseController); // merchant
 router.get('/house/read',readHouseController); // merchant and tenant
@@ -11,7 +11,8 @@ router.delete('/house/delete',deleteHouseController); // merchant
 
 // payment related routes
 router.post('/payment/create', createPaymentController); // tenant
-router.get('/payment/read',readPaymentController); //merchant and tenant
+router.get('/payment/read',readPaymentController); // tenant
+router.get('/payment/merchantRead',merchantReadsPaymentController);//merchant
 router.put('/payment/update',updatePaymentController); // merchant
 router.delete('/payment/delete',deletePaymentController);
 
