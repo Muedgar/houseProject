@@ -39,6 +39,9 @@ const start = async (PORT, MONGO_URI) => {
 app.use(express.static(__dirname+'/public'));
 
 // basic routes
+app.get('/',(req,res)=> {
+    res.sendFile(__dirname+'/public/index.html');
+});
 app.get('/authentication',(req,res)=> {
     res.sendFile(__dirname+'/public/authentication.html');
 });
