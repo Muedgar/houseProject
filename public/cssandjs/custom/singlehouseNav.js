@@ -175,12 +175,11 @@ document.querySelectorAll('.buttonSingleViewNav')[1].addEventListener('click',()
 document.querySelectorAll('.buttonSingleViewNav')[2].addEventListener('click',() => {
   
   document.getElementById("view-single-house-controls").style.display="block";
-  document.querySelector(".vshc-wrapper1").style.display="flex";
   document.getElementById("view-single-house-gallery-id").style.display="none";
     document.getElementById("view-single-house-info-id").style.display="none";
 })
 
 document.querySelectorAll('.buttonSingleViewNav')[3].addEventListener('click',() => {
-
+  
   document.getElementById("view-single-house-id").style.display="none";
 })

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/villacare.ico" type="image/x-icon">
-    <title>Villacare | Landlord</title>
+    <title>Villacare | Tenant</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./cssandjs/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./cssandjs/custom/style.css">
@@ -29,39 +29,18 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul id="nav-ul" class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/merchant">Rental Manager</a>
+                <a class="nav-link" aria-current="page" href="/tenantView">View Houses</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" id="rentedHousesView">Rented Houses</a>
+                <a class="nav-link" href="#" id="rentedhouses">Rented Houses</a>
               </li>
-              <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  More Action
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li id="moreactionsmenu">
-                    <form id="viewupdate" action="/merchant/view" method="get">
-                        <input class="sameaslink btn btn-primary btn-info" type="submit" value="View Homes">
-                    </form>
-                    
-                  </li>
-                </ul>
-              </li> -->
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/merchantView">View Rental Listings</a>
-              </li>
+             
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">Log out</a>
               </li>
             </ul>
-            <div class="mb-3 form1-class">
-                <form id="form1" action="" method="post">
-                    <div class="custom-file mb-3">
-                        <input class="form-control custom-file-input" type="file" id="houses">        
-                        <input type="submit" value="Upload Houses Excel File and Click Here to Submit" class="sameaslink btn btn-primary btn-block">
-                    </div>
-                </form>
-            </div>
+            
+            
           </div>
         </div>
       </nav>
@@ -94,7 +73,7 @@ user interface components to
     </a>
     <a href="#" class="buttonSingleViewNav">
       <canvas class="button__canvas"></canvas>
-      <span class="button__text" value="managehouse">Manage House</span>
+      <span class="button__text" value="managehouse">Pay rent</span>
     </a>
     <a href="#" class="buttonSingleViewNav">
       <canvas class="button__canvas"></canvas>
@@ -173,76 +152,22 @@ $1
   </div>
   <div id="view-single-house-controls">
     <div id="vshc-container">
-    <button id="v-s-h-c-sign-1" class="btn btn-info">Update House Info</button>
-    <button id="v-s-h-c-sign-2" class="btn btn-danger">Delete House From Listings</button>
+    <button id="pay-rent" class="btn btn-info">Pay Rent</button>
     </div>
     <div id="vshc-form-container">
       <form action="" id="singlehouseformid">
-        <div id="singlehouseformiddiv">
-          <div class="vshc-wrapper1">
-            <label for="image1" class="draw drawLabel">Image 1 uri:</label>
-            <input id="v-s-h-c-sign-3"  class="inputStyle2 inputStyle1" type="text" name="image1" id="image1">
-            <label class="draw drawLabel" for="image2">Image 2 uri:</label>
-            <input id="v-s-h-c-sign-4"  class="inputStyle2 inputStyle1" type="text" name="image2" id="image2">
-            <label class="draw drawLabel" for="image3">Image 3 uri:</label>
-            <input id="v-s-h-c-sign-5"  class="inputStyle2 inputStyle1" type="text" name="image3" id="image3">
-          </div>
-    
-            <div class="vshc-wrapper2">
-            <label class="draw drawLabel" for="image4">Image 4 uri:</label>
-            <input id="v-s-h-c-sign-6"  class="inputStyle2 inputStyle1" type="text" name="image4" id="image4">
-            <label class="draw drawLabel" for="image5">Image 5 uri:</label>
-            <input id="v-s-h-c-sign-7"  class="inputStyle2 inputStyle1" type="text" name="image5" id="image5">
-            <label class="draw drawLabel" for="image6">Image 6 uri:</label>
-            <input id="v-s-h-c-sign-8"  class="inputStyle2 inputStyle1" type="text" name="image6" id="image6">
-          </div>
-    
-            <div class="vshc-wrapper3">
-            <label class="draw drawLabel" for="image7">Image 7 uri:</label>
-            <input id="v-s-h-c-sign-9"  class="inputStyle2 inputStyle1" type="text" name="image7" id="image7">
-            <label class="draw drawLabel" for="image8">Image 8 uri:</label>
-            <input id="v-s-h-c-sign-10"  class="inputStyle2 inputStyle1" type="text" name="image8" id="image8">
-            <label class="draw drawLabel" for="image9">Image 9 uri:</label>
-            <input id="v-s-h-c-sign-11"  class="inputStyle2 inputStyle1" type="text" name="image9" id="image9">
-          </div>
-    
-            <div class="vshc-wrapper4">
-              <label class="draw drawLabel" for="costpermonthinput">Cost per month:</label>
-              <input id="v-s-h-c-sign-12"  class="inputStyle2 inputStyle1" type="text" name="costpermonthinput" id="costpermonthinput">
-              <label class="draw drawLabel" for="sizeinput">Size:</label>
-              <input id="v-s-h-c-sign-13"  class="inputStyle2 inputStyle1" type="text" name="sizeinput" id="sizeinput">
-              <label class="draw drawLabel" for="location">Location:</label>
-              <input id="v-s-h-c-sign-14"  class="inputStyle2 inputStyle1" type="text" name="location" id="location">
-          </div>
-    
-          <div class="vshc-wrapper5">
-            <label class="draw drawLabel" for="contact1input">Contact 1:</label>
-            <input id="v-s-h-c-sign-15"  class="inputStyle2 inputStyle1" type="text" name="contact1input" id="contact1input">
-            <label class="draw drawLabel" for="contact2input">Contact 2:</label>
-            <input id="v-s-h-c-sign-16"  class="inputStyle2 inputStyle1" type="text" name="contact2input" id="contact2input">
-            <label class="draw drawLabel" for="contact3input">Contact 3:</label>
-            <input id="v-s-h-c-sign-17"  class="inputStyle2 inputStyle1" type="text" name="contact3input" id="contact3input">
-            <label class="draw drawLabel" for="houseownerinput">House owner contact:</label>
-            <input id="v-s-h-c-sign-18"  class="inputStyle2 inputStyle1" type="text" name="houseownerinput" id="houseownerinput">
-        </div>
-    
-        <div class="vshc-wrapper6">
-          <label class="draw drawLabel" for="descriptioninput">Description:</label>
-          <textarea id="v-s-h-c-sign-19" name="descriptioninput" id="descriptioninput" cols="30" rows="10"></textarea>
-        </div>
-    
-        <div class="vshc-wrapper7">
-          <label class="draw drawLabel" for="rentalfactsinput">Rental facts:</label>
-          <textarea id="v-s-h-c-sign-20" name="rentalfactsinput" id="rentalfactsinput" cols="30" rows="10"></textarea>
-        </div>
-        
-        
+        <div id="singlehouseformiddiv" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr">
+            <label class="draw drawLabel" for="contact1input">Landlord Contact:</label>
+            <input id="landlord"  class="inputStyle2 inputStyle1" type="text" name="contact1input" id="contact1input">
+            <label class="draw drawLabel" for="contact1input">Tenant Contact:</label>
+            <input id="tenant"  class="inputStyle2 inputStyle1" type="text" name="contact1input" id="contact1input">
+            <label class="draw drawLabel" for="contact1input">Payment date:</label>
+            <input id="paymentdate"  class="inputStyle2 inputStyle1" type="text" name="contact1input" id="contact1input">
+            <label class="draw drawLabel" for="contact2input">Monthly Cost:</label>
+            <input id="monthlycost"  class="inputStyle2 inputStyle1" type="text" name="contact2input" id="contact2input">
+            
         </div>
       </form>
-      <div class="vshc-wrapper8">
-        <button class="vshc-wrapper8-prev">Prev</button>
-        <button class="vshc-wrapper8-next">Next</button>
-      </div>
     </div>
   </div>
 </section>
@@ -269,12 +194,8 @@ $1
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
       <script src="./cssandjs/bootstrap/bootstrap.min.js"></script>
       <script src="./cssandjs/excel/xlsx.full.min.js"></script>
-      <script defer src="./cssandjs/custom/app.js"></script>
-    <script defer src="./cssandjs/custom/update.js"></script>
+      <script defer src="./cssandjs/custom/appClient.js"></script>
+    <script defer src="./cssandjs/custom/payClient.js"></script>
     <script src="./cssandjs/custom/singlehouseNav.js"></script>
-    <script src="./cssandjs/custom/singlehouseForm.js"></script>
-    <script src="./cssandjs/custom/updateHouse.js"></script>
-    <script src="./cssandjs/custom/deleteHouse.js"></script>
-    <script src="./cssandjs/custom/rentedHousesMerchant.js"></script>
 </body>
 </html>

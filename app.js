@@ -39,11 +39,18 @@ const start = async (PORT, MONGO_URI) => {
 app.use(express.static(__dirname+'/public'));
 
 // basic routes
+app.get('/authentication',(req,res)=> {
+    res.sendFile(__dirname+'/public/authentication.html');
+});
 app.get('/merchant', (req, res) => {
-    res.sendFile(__dirname+'/public/index.html');
+    res.sendFile(__dirname+'/public/merchant.html');
 });
 app.get('/merchantView', (req, res) => {
     res.sendFile(__dirname+'/public/update.html');
+});
+
+app.get('/tenantView', (req,res)=> {
+    res.sendFile(__dirname+'/public/client.html');
 });
 
 // route to merchant create house route

@@ -11,8 +11,8 @@ router.delete('/house/delete',deleteHouseController); // merchant
 
 // payment related routes
 router.post('/payment/create', createPaymentController); // tenant
-router.get('/payment/read',readPaymentController); // tenant
-router.get('/payment/merchantRead',merchantReadsPaymentController);//merchant
+router.get('/payment/read/:currentuser',readPaymentController); // tenant
+router.get('/payment/merchantRead/:currentuser',merchantReadsPaymentController);//merchant
 router.put('/payment/update',updatePaymentController); // merchant
 router.delete('/payment/delete',deletePaymentController);
 

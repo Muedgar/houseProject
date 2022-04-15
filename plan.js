@@ -350,3 +350,16 @@ two main user interface tasks remaining.
 
 
 */
+
+/*
+1.start and finish building tenant user interface components = deploy to heroku
+
+Things to do:
+Payment Use Case
+1.View houses that can be rented
+2.By Clicking on one house, user view more infomation or fill a form to rent
+3.Submiting the form closes the more information div.
+
+Continuing Paying Use Case
+1.
+*/

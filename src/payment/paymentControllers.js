@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 
 const createPaymentController = async(req,res) => {
     try {
+        console.log("trying to create",req.body);
         const {merchant,tenant,house,date,amount,status} = req.body;
         new crudPaymentModel().createPayment(merchant,tenant,house,date,amount,status).then(d=> {
             res.status(200).json({result: "successfully created"});
@@ -67,10 +68,13 @@ const readPaymentController = async(req,res) => {
                 i.input a current user
                 ii.return houses that current user rented using filtering.
            */
-           const {currentuser} = req.body;
+           const {currentuser} = req.params;
+           console.log(currentuser);
            let listRentedHousesSpecificUser = [];
+           let paymentsMadeInvolvingThisTenant = []
            for(let i=0;i<payments.length;i++) {
             if(currentuser == payments[i].tenant) {
+                paymentsMadeInvolvingThisTenant.push(payments[i]);
                 let houseId = payments[i].house;
                 // find house and store it
                 for(let j=0;j<housesThatAreRented.length;j++) {
@@ -80,7 +84,7 @@ const readPaymentController = async(req,res) => {
                 }
             }
            }
-           res.status(200).json({housesThatCanBeRented, listRentedHousesSpecificUser});
+           res.status(200).json({housesThatCanBeRented,listRentedHousesSpecificUser,paymentsMadeInvolvingThisTenant});
            }
            async function getData() {
             mongoose.connect(process.env.MONGO_URI).then(async d=>{
@@ -125,7 +129,7 @@ const  merchantReadsPaymentController = async(req, res) => {
             housesThatAreRented.push(houses[i]);
          }
        }
-       const {currentuser} = req.body;
+       const {currentuser} = req.params;
        let listRentedHousesSpecificUserMerchant = [];
        let paymentsMadeInvolvingThisMerchant = [];
        for(let i=0;i<payments.length;i++) {
