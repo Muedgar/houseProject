@@ -363,3 +363,42 @@ Payment Use Case
 Continuing Paying Use Case
 1.
 */
+
+
+
+
+
+/*
+[[[[[ NON FUNCTIONAL REQUIREMENTS
+Performance – for example Response Time, Throughput, Utilisation, Static Volumetric
+Scalability
+Capacity
+Availability
+Reliability
+Recoverability
+Maintainability
+Serviceability
+Security
+Regulatory
+Manageability
+Environmental
+Data Integrity
+Usability
+Interoperability
+]]]]]
+
+[[[[[[[[[FUNCTIONAL REQUIREMENTS
+Business Rules
+Transaction (handling) corrections, adjustments, and cancellations
+Administrative functions
+Authentication
+Authorisation levels
+Audit Tracking
+External Interfaces
+Certification Requirements
+Reporting Requirements
+Historical Data
+Legal and Regulatory Requirements
+]]]]]]]]]
+
+*/
